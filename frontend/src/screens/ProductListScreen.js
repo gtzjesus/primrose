@@ -90,20 +90,20 @@ export default function ProductListScreen() {
   };
   return (
     <div>
-            <Row>
-         <Col>
-           <h1>Products</h1>
-         </Col>
-         <Col className="col text-end">
-           <div>
-             <Button type="button" onClick={createHandler}>
-               Create Product
-             </Button>
-           </div>
-         </Col>
-       </Row>
+      <Row>
+        <Col>
+          <h1>Products</h1>
+        </Col>
+        <Col className="col text-end">
+          <div>
+            <Button type="button" onClick={createHandler}>
+              Create Product
+            </Button>
+          </div>
+        </Col>
+      </Row>
 
-       {loadingCreate && <LoadingBox></LoadingBox>}
+      {loadingCreate && <LoadingBox></LoadingBox>}
 
       {loading ? (
         <LoadingBox></LoadingBox>
@@ -119,6 +119,7 @@ export default function ProductListScreen() {
                 <th>PRICE</th>
                 <th>CATEGORY</th>
                 <th>BRAND</th>
+                <th>ACTIONS</th>
               </tr>
             </thead>
             <tbody>
@@ -129,6 +130,15 @@ export default function ProductListScreen() {
                   <td>{product.price}</td>
                   <td>{product.category}</td>
                   <td>{product.brand}</td>
+                  <td>
+                    <Button
+                      type="button"
+                      variant="light"
+                      onClick={() => navigate(`/admin/product/${product._id}`)}
+                    >
+                      Edit
+                    </Button>
+                  </td>
                 </tr>
               ))}
             </tbody>
