@@ -59,7 +59,7 @@ export default function CartScreen() {
                         alt={item.name}
                         className="img-fluid rounded img-thumbnail"
                       ></img>{' '}
-                      <Link to={`/product/${item.id}`}>{item.name}</Link>
+                      <Link to={`/product/${item._id}`}>{item.name}</Link>
                     </Col>
                     <Col md={3}>
                       <Button

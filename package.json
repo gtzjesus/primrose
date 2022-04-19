@@ -1,5 +1,6 @@
 {
   "name": "primrose",
+  "type": "module",
   "version": "1.0.0",
   "description": "# Settin Up",
   "main": "index.js",
