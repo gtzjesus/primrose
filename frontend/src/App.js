@@ -33,6 +33,8 @@ import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
+import Footer from './components/Footer';
+import Shipping from './components/Shipping';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -72,17 +74,18 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
+          <Shipping />
           <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
-              <Button
+              {/* <Button
                 variant="dark"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
               >
                 <i className="fas fa-bars"></i>
-              </Button>
+              </Button> */}
 
               <LinkContainer to="/">
-                <Navbar.Brand>primrose</Navbar.Brand>
+                <Navbar.Brand>Primrose</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -253,7 +256,7 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className="text-center">All Rights Reserved</div>
+          <Footer />
         </footer>
       </div>
     </BrowserRouter>

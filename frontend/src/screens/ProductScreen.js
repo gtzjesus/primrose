@@ -15,6 +15,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { getError } from '../utils';
 import { Store } from '../Store';
+import GoToTop from '../GoToTop';
 
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import { toast } from 'react-toastify';
@@ -150,23 +151,23 @@ function ProductScreen() {
             </ListGroup.Item>
             <ListGroup.Item>Price : ${product.price}</ListGroup.Item>
             <ListGroup.Item>
-               <Row xs={1} md={2} className="g-2">
-                 {[product.image, ...product.images].map((x) => (
-                   <Col key={x}>
-                     <Card>
-                       <Button
-                         className="thumbnail"
-                         type="button"
-                         variant="light"
-                         onClick={() => setSelectedImage(x)}
-                       >
-                         <Card.Img variant="top" src={x} alt="product" />
-                       </Button>
-                     </Card>
-                   </Col>
-                 ))}
-               </Row>
-             </ListGroup.Item>
+              <Row xs={1} md={2} className="g-2">
+                {[product.image, ...product.images].map((x) => (
+                  <Col key={x}>
+                    <Card>
+                      <Button
+                        className="thumbnail"
+                        type="button"
+                        variant="light"
+                        onClick={() => setSelectedImage(x)}
+                      >
+                        <Card.Img variant="top" src={x} alt="product" />
+                      </Button>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </ListGroup.Item>
             <ListGroup.Item>
               Description:
               <p>{product.description}</p>
@@ -277,6 +278,7 @@ function ProductScreen() {
           )}
         </div>
       </div>
+      <GoToTop />
     </div>
   );
 }
