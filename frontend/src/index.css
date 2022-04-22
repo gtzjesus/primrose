@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap');
 * {
   letter-spacing: 1px;
 }
 body {
+  font-family: 'Dosis', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Kalam', cursive, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+#logo-title {
+  font-family: 'Kalam', cursive, sans-serif;
+}
+#return-shopping {
+  color: #1c1c1c;
+}
+#product-price {
+  font-size: 20px;
 }
 a {
   text-decoration: none;
@@ -22,14 +32,16 @@ main {
 }
 .btn-primary,
 .btn-outline-primary {
-  background-color: #f4d5f1;
+  background-color: #f3e0ee;
   color: #1c1c1c;
   border: 0.5px solid black;
 }
 .btn-primary:hover,
 .btn-outline-primary:hover {
-  background-color: #1c1c1c;
-  border: none;
+  background-color: #ffff;
+  color: #1c1c1c;
+  transition: 0.5s ease-in-out;
+  border: 0.5px solid black;
 }
 .products {
   display: flex;
@@ -40,7 +52,7 @@ main {
   color: #ffc000;
 }
 .product {
-  border: 0.5px #f4d5f1 solid;
+  border: 0.5px solid;
   margin: 1rem;
 }
 .product-info {
@@ -77,7 +89,7 @@ main {
   transition: 0.5s ease;
   top: 0;
   z-index: 99;
-  background-color: #f4d5f1;
+  background-color: #f3e0ee;
 }
 .shipping > .shipping__option > li > a {
   padding: 0;

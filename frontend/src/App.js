@@ -75,7 +75,7 @@ function App() {
         <ToastContainer position="bottom-center" limit={1} />
         <header>
           <Shipping />
-          <Navbar bg="dark" variant="dark" expand="lg">
+          <Navbar bg="light" variant="light" expand="lg">
             <Container>
               {/* <Button
                 variant="dark"
@@ -84,12 +84,13 @@ function App() {
                 <i className="fas fa-bars"></i>
               </Button> */}
 
-              <LinkContainer to="/">
-                <Navbar.Brand>Primrose</Navbar.Brand>
-              </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
+                <LinkContainer to="/">
+                  <Navbar.Brand id="logo-title">Primrose</Navbar.Brand>
+                </LinkContainer>
                 <SearchBox />
+
                 <Nav className="me-auto w-100 justify-content-end">
                   <Link to="/cart" className="nav-link">
                     cart
