@@ -47,8 +47,10 @@ function HomeScreen() {
       <Helmet>
         <title>Primrose | Fashion by Jess</title>
       </Helmet>
-      {/* <h1>Featured Products</h1> */}
-      <div className="products">
+      <div className="prim-title">
+        <h1>Primrose</h1>
+      </div>
+      {/* <div className="products">
         {loading ? (
           <LoadingBox />
         ) : error ? (
@@ -62,7 +64,7 @@ function HomeScreen() {
             ))}
           </Row>
         )}
-      </div>
+      </div> */}
       <GoToTop />
     </div>
   );
