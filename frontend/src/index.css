@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap');
 * {
-  letter-spacing: 1px;
+  letter-spacing: 0px;
+}
+h1 {
+  font-size: 35px;
 }
 body {
   font-family: 'Dosis', sans-serif;
@@ -10,9 +13,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+input {
+  border: none;
+  color: #1c1c1c;
+  padding: 0.5%;
+  width: 50%;
+}
 #logo-title,
 .prim-title {
   font-family: 'Kalam', cursive, sans-serif;
+}
+#logo-title img,
+.prim-title img {
+  width: 30px;
 }
 #return-shopping {
   color: #1c1c1c;
@@ -23,8 +36,8 @@ body {
 /* HOME SCREEN IMPLEMENTATION CSS */
 .prim-title h1 {
   text-align: center;
-  margin: 2.5% 0;
-  font-size: 55px;
+  margin: 0;
+  font-size: 45px;
 }
 a {
   text-decoration: none;
@@ -191,20 +204,22 @@ button.thumbnail {
     opacity: 0.75;
   }
 }
+
+/* SIGNATURE COPYRIGHT IMPLEMENTATION CSS */
 .signature {
   padding: 7.5% 0 0 0;
-}
-.signature > p {
-  font-size: 13px;
   text-align: center;
+}
+.signature > a {
+  font-size: 16px;
+
   color: #1c1c1c;
 }
 @media screen and (max-width: 956px) {
   .signature {
     padding: 7.5% 0 0 0;
   }
-  .signature > p {
-    font-size: 11px;
-    text-align: center;
+  .signature > a {
+    font-size: 16px;
   }
 }

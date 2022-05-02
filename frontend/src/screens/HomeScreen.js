@@ -8,6 +8,9 @@ import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import GoToTop from '../GoToTop';
+import ImageSlider from '../components/ImageSlider';
+import CategorySlider from '../components/CategorySlider';
+import WorldPrim from '../components/WorldPrim';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -48,9 +51,19 @@ function HomeScreen() {
         <title>Primrose | Fashion by Jess</title>
       </Helmet>
       <div className="prim-title">
-        <h1>Primrose</h1>
+        <h1>
+          Primrose
+          <img src="/images/primrose.png" alt="" />
+        </h1>
       </div>
-      {/* <div className="products">
+      <ImageSlider />
+      <div className="prim-title">
+        <h1>Jess's Latest Collection</h1>
+      </div>
+      <CategorySlider />
+      <WorldPrim />
+      {/*
+      <div className="products">
         {loading ? (
           <LoadingBox />
         ) : error ? (

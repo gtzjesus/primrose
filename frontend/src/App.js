@@ -74,7 +74,7 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Shipping />
+          {/* <Shipping /> */}
           <Navbar bg="light" variant="light" expand="lg">
             <Container>
               {/* <Button
@@ -87,7 +87,10 @@ function App() {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <LinkContainer to="/">
-                  <Navbar.Brand id="logo-title">Primrose</Navbar.Brand>
+                  <Navbar.Brand id="logo-title">
+                    Primrose
+                    <img src="/images/primrose.png" alt="" />
+                  </Navbar.Brand>
                 </LinkContainer>
                 <SearchBox />
 
