@@ -35,6 +35,8 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import Footer from './components/Footer';
 import Shipping from './components/Shipping';
+import Header from './components/Header';
+import Sticky from './components/Sticky';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -72,17 +74,18 @@ function App() {
             : 'd-flex flex-column site-container'
         }
       >
-        <ToastContainer position="bottom-center" limit={1} />
+        <Header />
+        <Sticky />
+        {/* <ToastContainer position="bottom-center" limit={1} />
         <header>
-          {/* <Shipping /> */}
           <Navbar bg="light" variant="light" expand="lg">
             <Container>
-              {/* <Button
+              <Button
                 variant="dark"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
               >
                 <i className="fas fa-bars"></i>
-              </Button> */}
+              </Button>
 
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -168,7 +171,7 @@ function App() {
               </Nav.Item>
             ))}
           </Nav>
-        </div>
+        </div> */}
         <main>
           <Container className="mt-4">
             <Routes>

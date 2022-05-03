@@ -51,12 +51,6 @@ function HomeScreen() {
       <Helmet>
         <title>Primrose | Fashion by Jess</title>
       </Helmet>
-      <div className="prim-title">
-        <h1>
-          Primrose
-          <img src="/images/primrose.png" alt="" />
-        </h1>
-      </div>
 
       <ImageSlider />
 

@@ -38,7 +38,7 @@ const ImgSlider = (props) => {
 const Carousel = styled(Slider)`
   margin-top: 2.5vh;
   overflow-x: hidden;
-  height: 70vh;
+  height: 100%;
 
   & > button {
     opacity: 1;

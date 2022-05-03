@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap');
 * {
   letter-spacing: 0px;
+  text-decoration: none;
+  list-style: none;
+  color: #1c1c1c;
 }
 h1 {
-  font-size: 35px;
+  font-size: 30px;
 }
 body {
   font-family: 'Dosis', sans-serif;
@@ -19,10 +22,12 @@ input {
   padding: 0.5%;
   width: 35%;
 }
+Link {
+  color: #1c1c1c;
+}
 
 #logo-title,
 .prim-title {
-  font-family: 'Kalam', cursive, sans-serif;
 }
 #logo-title img,
 .prim-title img {
@@ -39,6 +44,96 @@ input {
 #product-price {
   font-size: 20px;
 }
+/* STICKY IMPLEMENTATION IN CSS */
+.nav {
+  display: flex;
+  position: sticky;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  top: 0;
+  z-index: 99;
+}
+
+.nav__option {
+  padding: 0 30px 0 0;
+}
+.nav__black {
+  background-color: #ffff;
+}
+.bottomMenu {
+  display: none;
+  z-index: 1;
+}
+
+@media screen and (max-width: 956px) {
+  .nav {
+    height: 90px;
+  }
+
+  .nav__option {
+    padding: 0 10px 0 0;
+  }
+}
+
+/* HEADER IMPLEMENTATION CSS */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 1% 0 1%;
+  transition: 0.5s;
+  color: #1c1c1c;
+}
+.header__title {
+  font-family: 'Kalam', cursive, sans-serif;
+}
+.header__title > a {
+  font-size: 35px;
+  color: #1c1c1c;
+}
+.header__title > a > img {
+  width: 20px;
+  display: block;
+  float: right;
+  padding: 5% 0 0 0;
+}
+.header__account {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  color: #1c1c1c;
+}
+.header__option {
+  padding: 0 0 0 20px;
+}
+/* UNITED STATES */
+.header__option h1 {
+  padding: 0 15px 0 0;
+  font-size: 15px;
+  color: #1c1c1c;
+}
+
+@media screen and (max-width: 956px) {
+  .header {
+    padding: 5% 2.5% 0 2.5%;
+  }
+
+  .header__title > a {
+    font-size: 20px;
+  }
+
+  .header__option {
+    padding: 0 0 0 10px;
+  }
+  /* UNITED STATES */
+  .header__option h1 {
+    padding: 0 15px 0 0;
+    font-size: 15px;
+    color: #1c1c1c;
+  }
+}
+
 /* HOME SCREEN IMPLEMENTATION CSS */
 .prim-title h1 {
   text-align: center;
@@ -141,9 +236,6 @@ main {
   background-color: #1c1c1c;
 }
 @media screen and (max-width: 956px) {
-  .nav {
-    display: none;
-  }
 }
 
 /* sidebar */
