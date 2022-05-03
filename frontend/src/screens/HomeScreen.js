@@ -11,6 +11,7 @@ import GoToTop from '../GoToTop';
 import ImageSlider from '../components/ImageSlider';
 import CategorySlider from '../components/CategorySlider';
 import WorldPrim from '../components/WorldPrim';
+import DoubleSlider from '../components/DoubleSlider';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -56,12 +57,21 @@ function HomeScreen() {
           <img src="/images/primrose.png" alt="" />
         </h1>
       </div>
+
       <ImageSlider />
-      <div className="prim-title">
+
+      <div className="sub-title">
         <h1>Jess's Latest Collection</h1>
       </div>
       <CategorySlider />
+
+      <div className="sub-title">
+        <h1>Shop Primrose By Style</h1>
+      </div>
+      <DoubleSlider />
+
       <WorldPrim />
+
       {/*
       <div className="products">
         {loading ? (

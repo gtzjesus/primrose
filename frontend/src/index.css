@@ -17,8 +17,9 @@ input {
   border: none;
   color: #1c1c1c;
   padding: 0.5%;
-  width: 50%;
+  width: 35%;
 }
+
 #logo-title,
 .prim-title {
   font-family: 'Kalam', cursive, sans-serif;
@@ -26,6 +27,11 @@ input {
 #logo-title img,
 .prim-title img {
   width: 30px;
+}
+.sub-title {
+  font-family: 'Kalam', cursive, sans-serif;
+  text-align: center;
+  margin: 7.5vh 0;
 }
 #return-shopping {
   color: #1c1c1c;

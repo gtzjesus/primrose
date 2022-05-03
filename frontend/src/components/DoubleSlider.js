@@ -3,33 +3,41 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 
-const WorldPrim = (props) => {
+const DoubleSlider = (props) => {
   let settings = {
     dots: false,
     infinite: true,
     speed: 1800,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
   };
   return (
     <Carousel {...settings}>
       <Wrap>
-        <h1>ENTER THE WORLD OF PRIMROSE</h1>
-        <p>Hear about exclusive events, collections, drops, and news.</p>
-        <input placeholder="Enter Email Address"></input>
+        <a href={`/search/?query=Top`}>
+          <img src="/images/tops-slider.png" alt="" />
+        </a>
+      </Wrap>
+
+      <Wrap>
+        <a href={`/search/?query=Jean`}>
+          <img src="/images/jeans-slider.png" alt="" />
+        </a>
+      </Wrap>
+
+      <Wrap>
+        <a href={`/search/?query=Dress`}>
+          <img src="/images/dresses-slider.png" alt="" />
+        </a>
       </Wrap>
     </Carousel>
   );
 };
 
 const Carousel = styled(Slider)`
-  margin-top: 10vh;
-  padding: 40px 70px;
+  margin-top: 5vh;
   overflow-x: hidden;
-  cursor: none;
-  background: url('/images/world-prim.png') no-repeat;
-  width: 100%;
   height: 100%;
 
   & > button {
@@ -43,24 +51,12 @@ const Carousel = styled(Slider)`
       transition: opacity 0.2s ease 0s;
     }
   }
+
   @media screen and (max-width: 956px) {
     height: 100%;
-    padding: 30px 30px;
-    input {
-      border: none;
-      color: #1c1c1c;
-      margin: 10px 0 0 0;
-      padding: 2.5%;
-      width: 100%;
-    }
-  }
 
-  h1 {
-    padding: 30px 0 0 0;
-
-    &:hover {
-      color: inherit;
-      style: none;
+    & > button {
+      width: 15vw;
     }
   }
 
@@ -93,11 +89,12 @@ const Wrap = styled.div`
   border-radius: 0px;
   cursor: pointer;
   position: relative;
-  background-image: url('/images/world-prim.png') a {
+
+  a {
     border-radius: 2.5px;
     /* box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
       rgb(0 0 0 / 73%) 0px 16px 10px -10px; */
-    cursor: none;
+    cursor: pointer;
     display: block;
     position: relative;
     padding: 4px;
@@ -115,4 +112,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default WorldPrim;
+export default DoubleSlider;

@@ -51,6 +51,13 @@ const Carousel = styled(Slider)`
       transition: opacity 0.2s ease 0s;
     }
   }
+  @media screen and (max-width: 956px) {
+    height: 100%;
+
+    & > button {
+      width: 15vw;
+    }
+  }
 
   ul li button {
     &:before {
@@ -74,7 +81,6 @@ const Carousel = styled(Slider)`
 
   .slick-next {
     right: -15px;
-  }
 `;
 
 const Wrap = styled.div`
