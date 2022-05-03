@@ -64,10 +64,6 @@ function HomeScreen() {
         <h1>Jess's Latest Collection</h1>
       </div>
       <CategorySlider />
-
-      <div className="sub-title">
-        <h1>Shop Primrose By Style</h1>
-      </div>
       <DoubleSlider />
 
       <WorldPrim />

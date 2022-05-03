@@ -31,7 +31,7 @@ input {
 .sub-title {
   font-family: 'Kalam', cursive, sans-serif;
   text-align: center;
-  margin: 7.5vh 0;
+  margin: 5vh 0;
 }
 #return-shopping {
   color: #1c1c1c;
@@ -50,6 +50,16 @@ a {
   list-style: none;
   color: inherit;
 }
+input:focus {
+  outline: none !important;
+  border-color: #f7fbff;
+  box-shadow: 0 0 10px #f7fbff;
+}
+textarea:focus {
+  outline: none !important;
+  border-color: #f7fbff;
+  box-shadow: 0 0 10px #f7fbff;
+}
 .site-container {
   min-height: 100vh;
 }
@@ -58,14 +68,14 @@ main {
 }
 .btn-primary,
 .btn-outline-primary {
-  background-color: #f3e0ee;
+  background-color: #ffff;
   color: #1c1c1c;
   border: 0.5px solid black;
 }
 .btn-primary:hover,
 .btn-outline-primary:hover {
-  background-color: #ffff;
-  color: #1c1c1c;
+  background-color: #1c1c1c;
+  color: #ffff;
   transition: 0.5s ease-in-out;
   border: 0.5px solid black;
 }
