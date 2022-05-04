@@ -107,12 +107,6 @@ const Wrap = styled.div`
       width: 100%;
       height: 100%;
     }
-
-    &:hover {
-      padding: 0;
-      border: 2.5px solid #1c1c1c;
-      transition-duration: 300ms;
-    }
   }
 
   @media screen and (max-width: 956px) {
@@ -125,12 +119,6 @@ const Wrap = styled.div`
       img {
         width: 100%;
         height: 100%;
-      }
-
-      &:hover {
-        padding: 0;
-        border: 2.5px solid #1c1c1c;
-        transition-duration: 300ms;
       }
     }
   }

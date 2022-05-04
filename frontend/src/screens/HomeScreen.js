@@ -55,17 +55,25 @@ function HomeScreen() {
       <ImageSlider />
 
       <div className="sub-title">
-        <h1>Jess's Latest Collection</h1>
-      </div>
-      <CategorySlider />
-      <div className="sub-title">
         <h1>Primrose's Favorites</h1>
       </div>
       <DoubleSlider />
 
-      <WorldPrim />
+      <div className="sub-title">
+        <h1>Jess's Latest Collection</h1>
+      </div>
+      <CategorySlider />
 
-      {/*
+      <WorldPrim />
+      <GoToTop />
+    </div>
+  );
+}
+
+export default HomeScreen;
+
+{
+  /*
       <div className="products">
         {loading ? (
           <LoadingBox />
@@ -80,10 +88,5 @@ function HomeScreen() {
             ))}
           </Row>
         )}
-      </div> */}
-      <GoToTop />
-    </div>
-  );
+      </div> */
 }
-
-export default HomeScreen;
