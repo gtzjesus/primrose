@@ -5,16 +5,16 @@ import Slider from 'react-slick';
 
 const CategorySlider = (props) => {
   let settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 100,
-    slidesToShow: 4,
+    speed: 300,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
   };
 
   return (
-    <Carousel>
+    <Carousel {...settings}>
       <Wrap>
         <a href={`/search/?query=Top`}>
           <img src="/images/tops-category.png" alt="" />

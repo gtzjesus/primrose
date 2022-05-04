@@ -13,22 +13,16 @@ const DoubleSlider = (props) => {
     autoplay: true,
   };
   return (
-    <Carousel>
+    <Carousel {...settings}>
       <Wrap>
         <a href={`/search/?query=Top`}>
-          <img src="/images/tops-slider.png" alt="" />
+          <img src="/images/prim-hat-slider.png" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a href={`/search/?query=Jean`}>
-          <img src="/images/jeans-slider.png" alt="" />
-        </a>
-      </Wrap>
-
-      <Wrap>
-        <a href={`/search/?query=Dress`}>
-          <img src="/images/dresses-slider.png" alt="" />
+          <img src="/images/accessor-slider.png" alt="" />
         </a>
       </Wrap>
     </Carousel>
@@ -107,6 +101,13 @@ const Wrap = styled.div`
       padding: 0;
       border: 2.5px solid #1c1c1c;
       transition-duration: 300ms;
+    }
+  }
+  @media screen and (max-width: 956px) {
+    &:hover {
+      padding: 0;
+      border: none;
+      transition-duration: 0;
     }
   }
 `;

@@ -107,7 +107,7 @@ input {
   }
 
   .header__title > a {
-    font-size: 30px;
+    font-size: 28px;
   }
   .header__title > a > img {
     width: 18px;
@@ -122,11 +122,11 @@ input {
   /* UNITED STATES */
   .header__option h1 {
     padding: 0 15px 0 0;
-    font-size: 18px;
+    font-size: 16px;
     color: #1c1c1c;
   }
   .link {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 /* HEADER IMPLEMENTATION CSS */
@@ -145,7 +145,7 @@ input {
 
 .nav__option {
   padding: 0 25px 0 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 .nav__black {
   background-color: #ffff;
@@ -163,17 +163,12 @@ input {
 
   .nav__option {
     padding: 0 10px 0 0;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 /* STICKY IMPLEMENTATION IN CSS */
 
 /* HOME SCREEN IMPLEMENTATION CSS */
-.prim-title h1 {
-  text-align: center;
-  margin: 0;
-  font-size: 45px;
-}
 a {
   text-decoration: none;
   list-style: none;
@@ -329,7 +324,7 @@ button.thumbnail {
 }
 @media screen and (max-width: 956px) {
   .footer {
-    margin: 5%;
+    margin: 1%;
   }
   .footer__container {
     display: flex;
@@ -358,7 +353,7 @@ button.thumbnail {
 }
 .signature > a {
   font-size: 15px;
-  padding: 5%;
+  padding: 0 0 2.5% 0;
   color: #1c1c1c;
 }
 @media screen and (max-width: 956px) {
