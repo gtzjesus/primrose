@@ -7,7 +7,7 @@ const ImgSlider = (props) => {
   let settings = {
     dots: false,
     infinite: true,
-    speed: 1800,
+    speed: 2100,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
