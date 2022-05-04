@@ -55,7 +55,7 @@ const Carousel = styled(Slider)`
     height: 100%;
 
     & > button {
-      width: 15vw;
+      width: 20vw;
     }
   }
 
@@ -95,7 +95,7 @@ const Wrap = styled.div`
     cursor: pointer;
     display: block;
     position: relative;
-    padding: 4px;
+    padding: 15px;
 
     img {
       width: 100%;
@@ -106,6 +106,25 @@ const Wrap = styled.div`
       padding: 0;
       border: 2.5px solid #1c1c1c;
       transition-duration: 300ms;
+    }
+  }
+
+  @media screen and (max-width: 956px) {
+    a {
+      cursor: pointer;
+      display: block;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        padding: 0;
+        border: 2.5px solid #1c1c1c;
+        transition-duration: 300ms;
+      }
     }
   }
 `;

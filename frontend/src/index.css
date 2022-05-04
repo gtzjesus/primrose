@@ -76,11 +76,13 @@ Link {
 
 @media screen and (max-width: 956px) {
   .nav {
-    height: 90px;
+    height: 100%;
+    padding: 1.5%;
   }
 
   .nav__option {
     padding: 0 10px 0 0;
+    font-size: 18px;
   }
 }
 
@@ -126,11 +128,17 @@ Link {
 
 @media screen and (max-width: 956px) {
   .header {
-    padding: 5% 2.5% 0 2.5%;
+    padding: 2.5% 5% 0 5%;
   }
 
   .header__title > a {
-    font-size: 20px;
+    font-size: 30px;
+  }
+  .header__title > a > img {
+    width: 18px;
+    display: block;
+    float: right;
+    padding: 1% 0 0 0;
   }
 
   .header__option {
@@ -139,8 +147,11 @@ Link {
   /* UNITED STATES */
   .header__option h1 {
     padding: 0 15px 0 0;
-    font-size: 15px;
+    font-size: 18px;
     color: #1c1c1c;
+  }
+  .link {
+    font-size: 18px;
   }
 }
 
