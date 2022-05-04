@@ -47,7 +47,7 @@ const Sticky = ({ totalItems }) => {
       <div className="nav__option">
         <Link to={`/search/?query=Jean`}>
           <li>
-            <a>Jeans</a>
+            <a>Bottoms</a>
           </li>
         </Link>
       </div>
@@ -62,7 +62,7 @@ const Sticky = ({ totalItems }) => {
       <div className="nav__option">
         <Link to={`/search/?query=Hat`}>
           <li>
-            <a>Hats</a>
+            <a>Accessories</a>
           </li>
         </Link>
       </div>
