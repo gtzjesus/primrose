@@ -90,7 +90,7 @@ const Wrap = styled.div`
     cursor: pointer;
     display: block;
     position: relative;
-    padding: 4px;
+    padding: 5px;
 
     img {
       width: 100%;
@@ -108,6 +108,9 @@ const Wrap = styled.div`
       padding: 0;
       border: none;
       transition-duration: 0;
+    }
+    a {
+      padding: 1px;
     }
   }
 `;
