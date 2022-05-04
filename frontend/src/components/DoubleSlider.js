@@ -30,6 +30,7 @@ const DoubleSlider = (props) => {
 };
 
 const Carousel = styled(Slider)`
+  margin-top: 2.5vh;
   overflow-x: hidden;
   height: 100%;
 
@@ -79,6 +80,7 @@ const Carousel = styled(Slider)`
 `;
 
 const Wrap = styled.div`
+
   border-radius: 0px;
   cursor: pointer;
   position: relative;
