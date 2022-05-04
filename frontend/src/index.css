@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap');
+/* CSS IMPLEMENTATION GLOBAL VARIABLES */
 * {
   letter-spacing: 0px;
   text-decoration: none;
@@ -22,9 +23,6 @@ input {
   padding: 0.5%;
   width: 35%;
 }
-Link {
-  color: #1c1c1c;
-}
 #basic-nav-dropdown,
 #admin-nav-dropdown {
   padding: 1% 1% 0 1%;
@@ -39,52 +37,29 @@ Link {
 .prim-title img {
   width: 30px;
 }
-.sub-title {
-  font-family: 'Kalam', cursive, sans-serif;
-  text-align: center;
-  margin: 5vh 0;
-}
+
 #return-shopping {
   color: #1c1c1c;
 }
 #product-price {
   font-size: 18px;
 }
-/* STICKY IMPLEMENTATION IN CSS */
-.nav {
-  display: flex;
-  position: sticky;
-  height: 55px;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s ease;
-  top: 0;
-  z-index: 99;
-}
+/* CSS IMPLEMENTATION GLOBAL VARIABLES */
 
-.nav__option {
-  padding: 0 25px 0 0;
-  font-size: 20px;
+/* SUBTITLES IMPLEMENTATION CSS */
+.sub-title h1 {
+  font-family: 'Kalam', cursive, sans-serif;
+  text-align: center;
+  margin: 10vh 0 0 0;
+  font-size: 30px;
 }
-.nav__black {
-  background-color: #ffff;
-}
-.bottomMenu {
-  display: none;
-  z-index: 1;
-}
-
 @media screen and (max-width: 956px) {
-  .nav {
-    height: 100%;
-    padding: 1.5%;
-  }
-
-  .nav__option {
-    padding: 0 10px 0 0;
-    font-size: 18px;
+  .sub-title h1 {
+    margin: 5vh 0 0 0;
+    font-size: 25px;
   }
 }
+/* SUBTITLES IMPLEMENTATION CSS */
 
 /* HEADER IMPLEMENTATION CSS */
 .header {
@@ -154,6 +129,44 @@ Link {
     font-size: 18px;
   }
 }
+/* HEADER IMPLEMENTATION CSS */
+
+/* STICKY IMPLEMENTATION IN CSS */
+.nav {
+  display: flex;
+  position: sticky;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  top: 0;
+  z-index: 99;
+}
+
+.nav__option {
+  padding: 0 25px 0 0;
+  font-size: 20px;
+}
+.nav__black {
+  background-color: #ffff;
+}
+.bottomMenu {
+  display: none;
+  z-index: 1;
+}
+
+@media screen and (max-width: 956px) {
+  .nav {
+    height: 100%;
+    padding: 1.5%;
+  }
+
+  .nav__option {
+    padding: 0 10px 0 0;
+    font-size: 18px;
+  }
+}
+/* STICKY IMPLEMENTATION IN CSS */
 
 /* HOME SCREEN IMPLEMENTATION CSS */
 .prim-title h1 {
@@ -232,7 +245,8 @@ main {
   border-bottom: 0.2rem solid #f08000;
   color: #f08000;
 }
-/* shipping navbar */
+
+/* SHIPPING NAVBAR IMPLEMENTATION CSS */
 .shipping {
   display: flex;
   height: 50px;
@@ -258,8 +272,9 @@ main {
 }
 @media screen and (max-width: 956px) {
 }
+/* SHIPPING NAVBAR IMPLEMENTATION CSS */
 
-/* sidebar */
+/* SIDEBAR HOME IMPLEMENTATION CSS */
 .navbar-brand {
   font-weight: bold;
 }
@@ -287,8 +302,9 @@ main {
 button.thumbnail {
   padding: 0;
 }
+/* SIDEBAR HOME IMPLEMENTATION CSS */
 
-/* footer */
+/* FOOTER IMPLEMENTATION CSS */
 .footer {
   margin: 5%;
 }
@@ -333,6 +349,7 @@ button.thumbnail {
     opacity: 0.75;
   }
 }
+/* FOOTER IMPLEMENTATION CSS */
 
 /* SIGNATURE COPYRIGHT IMPLEMENTATION CSS */
 .signature {
@@ -340,8 +357,8 @@ button.thumbnail {
   text-align: center;
 }
 .signature > a {
-  font-size: 16px;
-
+  font-size: 15px;
+  padding: 5%;
   color: #1c1c1c;
 }
 @media screen and (max-width: 956px) {
@@ -349,6 +366,7 @@ button.thumbnail {
     padding: 7.5% 0 0 0;
   }
   .signature > a {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
+/* SIGNATURE COPYRIGHT IMPLEMENTATION CSS */

@@ -13,7 +13,7 @@ const DoubleSlider = (props) => {
     autoplay: true,
   };
   return (
-    <Carousel {...settings}>
+    <Carousel>
       <Wrap>
         <a href={`/search/?query=Top`}>
           <img src="/images/tops-slider.png" alt="" />

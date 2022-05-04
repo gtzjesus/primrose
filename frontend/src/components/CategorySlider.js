@@ -7,13 +7,14 @@ const CategorySlider = (props) => {
   let settings = {
     dots: true,
     infinite: true,
-    speed: 1800,
+    speed: 100,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
   };
+
   return (
-    <Carousel {...settings}>
+    <Carousel>
       <Wrap>
         <a href={`/search/?query=Top`}>
           <img src="/images/tops-category.png" alt="" />
@@ -43,6 +44,7 @@ const CategorySlider = (props) => {
 const Carousel = styled(Slider)`
   margin-top: 2.5vh;
   overflow-x: hidden;
+  height: 100%;
 
   & > button {
     opacity: 1;
@@ -53,6 +55,13 @@ const Carousel = styled(Slider)`
     &:hover {
       opacity: 0.5;
       transition: opacity 0.2s ease 0s;
+    }
+  }
+  @media screen and (max-width: 956px) {
+    height: 100%;
+
+    & > button {
+      width: 20vw;
     }
   }
 
@@ -78,7 +87,6 @@ const Carousel = styled(Slider)`
 
   .slick-next {
     right: -15px;
-  }
 `;
 
 const Wrap = styled.div`
@@ -93,23 +101,37 @@ const Wrap = styled.div`
     cursor: pointer;
     display: block;
     position: relative;
-    padding: 4px;
+    padding: 5px;
 
     img {
       width: 100%;
       height: 100%;
-    }
-    @media screen and (max-width: 956px) {
-      height: 100%;
-
-      img {
-      }
     }
 
     &:hover {
       padding: 0;
       border: 2.5px solid #1c1c1c;
       transition-duration: 300ms;
+    }
+  }
+
+  @media screen and (max-width: 956px) {
+    a {
+      cursor: pointer;
+      display: block;
+      position: relative;
+      padding: 1px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        padding: 0;
+        border: 2.5px solid #1c1c1c;
+        transition-duration: 300ms;
+      }
     }
   }
 `;

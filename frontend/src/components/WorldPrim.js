@@ -45,18 +45,20 @@ const Carousel = styled(Slider)`
   }
   @media screen and (max-width: 956px) {
     height: 100%;
-    padding: 30px 30px;
+    font-size: 16px;
+    padding: 10px;
     input {
       border: none;
       color: #1c1c1c;
       margin: 10px 0 0 0;
-      padding: 2.5%;
+      padding: 1.5%;
       width: 100%;
     }
   }
 
   h1 {
-    padding: 30px 0 0 0;
+    padding: 0 0 0 0;
+    font-size: 25px;
 
     &:hover {
       color: inherit;
