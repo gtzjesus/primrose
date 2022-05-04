@@ -38,7 +38,7 @@ const Header = ({ totalItems }) => {
     <div className="header">
       <div className="header__left">
         <div className="header__option">
-          <h1>US Only*</h1>
+          <h1>U.S. Only*</h1>
         </div>
       </div>
       <div className="header__title">
@@ -51,7 +51,7 @@ const Header = ({ totalItems }) => {
         <div className="header__option">
           <Link to="/cart">
             <li>
-              <a>Cart</a>
+              <a className="link">Cart</a>
             </li>
 
             {cart.cartItems.length > 0 && (
@@ -77,17 +77,19 @@ const Header = ({ totalItems }) => {
                 onClick={signoutHandler}
               >
                 <li>
-                  <a>Sign Out</a>
+                  <a className="link">Sign Out</a>
                 </li>
               </Link>
             </NavDropdown>
           ) : (
             <Link to="/signin">
               <li>
-                <a>Sign In</a>
+                <a className="link">Sign In</a>
               </li>
             </Link>
           )}
+        </div>
+        <div className="header__option">
           {userInfo && userInfo.isAdmin && (
             <NavDropdown title="Admin" id="admin-nav-dropdown">
               <LinkContainer to="/admin/dashboard">

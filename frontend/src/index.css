@@ -25,7 +25,13 @@ input {
 Link {
   color: #1c1c1c;
 }
-
+#basic-nav-dropdown,
+#admin-nav-dropdown {
+  padding: 1% 1% 0 1%;
+  color: #1c1c1c;
+  font-size: 20px;
+  margin: 0;
+}
 #logo-title,
 .prim-title {
 }
@@ -42,7 +48,7 @@ Link {
   color: #1c1c1c;
 }
 #product-price {
-  font-size: 20px;
+  font-size: 18px;
 }
 /* STICKY IMPLEMENTATION IN CSS */
 .nav {
@@ -57,7 +63,8 @@ Link {
 }
 
 .nav__option {
-  padding: 0 30px 0 0;
+  padding: 0 25px 0 0;
+  font-size: 20px;
 }
 .nav__black {
   background-color: #ffff;
@@ -89,7 +96,7 @@ Link {
   font-family: 'Kalam', cursive, sans-serif;
 }
 .header__title > a {
-  font-size: 35px;
+  font-size: 50px;
   color: #1c1c1c;
 }
 .header__title > a > img {
@@ -107,10 +114,13 @@ Link {
 .header__option {
   padding: 0 0 0 20px;
 }
+.link {
+  font-size: 20px;
+}
 /* UNITED STATES */
 .header__option h1 {
   padding: 0 15px 0 0;
-  font-size: 15px;
+  font-size: 20px;
   color: #1c1c1c;
 }
 
@@ -169,8 +179,8 @@ main {
 }
 .btn-primary:hover,
 .btn-outline-primary:hover {
-  background-color: #1c1c1c;
-  color: #ffff;
+  background-color: #ffff;
+  color: #1c1c1c;
   transition: 0.5s ease-in-out;
   border: 0.5px solid black;
 }
