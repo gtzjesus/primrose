@@ -37,6 +37,15 @@ const Header = ({ totalItems }) => {
   return (
     <div className="header">
       <div className="header__left">
+        <div className="header__title">
+          <a href="/">
+            Primrose
+            <img src="/images/primrose.png" />
+          </a>
+        </div>
+      </div>
+
+      <div className="header__account">
         <div className="header__option">
           <Link to="/cart">
             <li>
@@ -50,14 +59,6 @@ const Header = ({ totalItems }) => {
             )}
           </Link>
         </div>
-      </div>
-      <div className="header__title">
-        <a href="/">
-          Primrose
-          <img src="/images/primrose.png" />
-        </a>
-      </div>
-      <div className="header__account">
         <div className="header__option">
           {userInfo ? (
             <NavDropdown title={userInfo.name} id="basic-nav-dropdown">

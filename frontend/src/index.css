@@ -72,7 +72,7 @@ input {
   font-family: 'Kalam', cursive, sans-serif;
 }
 .header__title > a {
-  font-size: 45px;
+  font-size: 25px;
   color: #1c1c1c;
 }
 .header__title > a > img {
@@ -106,17 +106,17 @@ input {
   }
 
   .header__title > a {
-    font-size: 38px;
+    font-size: 20px;
   }
   .header__title > a > img {
-    width: 26px;
+    width: 15px;
     display: block;
     float: right;
     padding: 1% 0 0 0;
   }
 
   .header__option {
-    padding: 0 0 0 10px;
+    padding: 0 0 0 15px;
   }
   /* UNITED STATES */
   .header__option h1 {
@@ -158,11 +158,11 @@ input {
 @media screen and (max-width: 956px) {
   .nav {
     height: 100%;
-    padding: 1% 0;
+    padding: 2% 0;
   }
   .stickyLink {
-    padding: 0 13.5px 0 0;
-    font-size: 17px;
+    padding: 0 10.5px 0 0;
+    font-size: 15px;
   }
   .nav__option {
     padding: 0 5% 2.5% 0;
