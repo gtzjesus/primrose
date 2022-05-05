@@ -72,11 +72,11 @@ input {
   font-family: 'Kalam', cursive, sans-serif;
 }
 .header__title > a {
-  font-size: 50px;
+  font-size: 45px;
   color: #1c1c1c;
 }
 .header__title > a > img {
-  width: 20px;
+  width: 26px;
   display: block;
   float: right;
   padding: 5% 0 0 0;
@@ -102,14 +102,14 @@ input {
 
 @media screen and (max-width: 956px) {
   .header {
-    padding: 2.5% 5% 0 5%;
+    padding: 3.5% 3.5% 0 3.5%;
   }
 
   .header__title > a {
-    font-size: 28px;
+    font-size: 38px;
   }
   .header__title > a > img {
-    width: 18px;
+    width: 26px;
     display: block;
     float: right;
     padding: 1% 0 0 0;
@@ -134,17 +134,18 @@ input {
 .nav {
   display: flex;
   position: sticky;
-  height: 65px;
+  height: 100%;
   justify-content: center;
   align-items: center;
   transition: 0.5s ease;
   top: 0;
   z-index: 99;
+  padding: 1% 0;
 }
 
-.nav__option {
-  padding: 0 25px 0 0;
-  font-size: 18px;
+.stickyLink {
+  padding: 0 35px 0 0;
+  font-size: 17px;
 }
 .nav__black {
   background-color: #ffff;
@@ -157,9 +158,12 @@ input {
 @media screen and (max-width: 956px) {
   .nav {
     height: 100%;
-    padding: 2.5%;
+    padding: 1% 0;
   }
-
+  .stickyLink {
+    padding: 0 13.5px 0 0;
+    font-size: 17px;
+  }
   .nav__option {
     padding: 0 5% 2.5% 0;
     font-size: 16px;

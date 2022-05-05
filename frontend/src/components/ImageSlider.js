@@ -7,7 +7,7 @@ const ImgSlider = (props) => {
   let settings = {
     dots: false,
     infinite: true,
-    speed: 2100,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -36,7 +36,6 @@ const ImgSlider = (props) => {
 };
 
 const Carousel = styled(Slider)`
-  margin-top: 2.5vh;
   overflow-x: hidden;
   height: 100%;
 
@@ -67,7 +66,7 @@ const Wrap = styled.div`
     cursor: pointer;
     display: block;
     position: relative;
-    padding: 15px;
+    padding: 1px;
 
     img {
       width: 100%;

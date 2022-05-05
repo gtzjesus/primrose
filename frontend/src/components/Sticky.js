@@ -37,32 +37,32 @@ const Sticky = ({ totalItems }) => {
                         <li><a>Gifts</a></li>
                     </Link>
             </div> */}
-      <div className="nav__option">
+      <div className="nav__option" class="bottomMenu">
         <Link to={`/search/?query=Top`}>
           <li>
-            <a>Tops</a>
+            <a className="stickyLink">Tops</a>
           </li>
         </Link>
       </div>
-      <div className="nav__option">
+      <div className="nav__option" class="bottomMenu">
         <Link to={`/search/?query=Jean`}>
           <li>
-            <a>Bottoms</a>
+            <a className="stickyLink">Bottoms</a>
           </li>
         </Link>
       </div>
 
-      <div className="nav__option">
+      <div className="nav__option" class="bottomMenu">
         <Link to={`/search/?query=Dress`}>
           <li>
-            <a>Dresses</a>
+            <a className="stickyLink">Dresses</a>
           </li>
         </Link>
       </div>
-      <div className="nav__option">
+      <div className="nav__option" class="bottomMenu">
         <Link to={`/search/?query=Hat`}>
           <li>
-            <a>Accessories</a>
+            <a className="stickyLink">Accessories</a>
           </li>
         </Link>
       </div>
