@@ -7,6 +7,9 @@
   list-style: none;
   color: #1c1c1c;
 }
+.test {
+  
+}
 h1 {
   font-size: 30px;
 }
@@ -30,9 +33,7 @@ input {
   font-size: 20px;
   margin: 0;
 }
-#logo-title,
-.prim-title {
-}
+
 #logo-title img,
 .prim-title img {
   width: 30px;

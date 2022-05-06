@@ -33,18 +33,18 @@ function Product(props) {
         <img src={product.image} className="card-img-top" alt={product.name} />
       </Link>
       <Card.Body>
-        <Card.Text id="product-price">${product.price}</Card.Text>
         <Link to={`/product/${product._id}`}>
           <Card.Title>{product.name}</Card.Title>
+          <Card.Text id="">${product.price}</Card.Text>
         </Link>
-        {/* <Rating rating={product.rating} numReviews={product.numReviews} /> */}
+        {/* <Rating rating={product.rating} numReviews={product.numReviews} />
         {product.countInStock === 0 ? (
           <Button variant="light" disabled>
             Out of stock
           </Button>
         ) : (
           <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
-        )}
+        )} */}
       </Card.Body>
     </Card>
   );
