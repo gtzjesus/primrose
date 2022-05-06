@@ -133,77 +133,6 @@ export default function SearchScreen() {
         <title>Search Products</title>
       </Helmet>
       <Row>
-        {/* <Col md={3}>
-          <h3>Department</h3>
-          <div>
-            <ul>
-              <li>
-                <Link
-                  className={'all' === category ? 'text-bold' : ''}
-                  to={getFilterUrl({ category: 'all' })}
-                >
-                  Any
-                </Link>
-              </li>
-              {categories.map((c) => (
-                <li key={c}>
-                  <Link
-                    className={c === category ? 'text-bold' : ''}
-                    to={getFilterUrl({ category: c })}
-                  >
-                    {c}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3>Price</h3>
-            <ul>
-              <li>
-                <Link
-                  className={'all' === price ? 'text-bold' : ''}
-                  to={getFilterUrl({ price: 'all' })}
-                >
-                  Any
-                </Link>
-              </li>
-              {prices.map((p) => (
-                <li key={p.value}>
-                  <Link
-                    to={getFilterUrl({ price: p.value })}
-                    className={p.value === price ? 'text-bold' : ''}
-                  >
-                    {p.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3>Avg. Customer Review</h3>
-            <ul>
-              {ratings.map((r) => (
-                <li key={r.name}>
-                  <Link
-                    to={getFilterUrl({ rating: r.rating })}
-                    className={`${r.rating}` === `${rating}` ? 'text-bold' : ''}
-                  >
-                    <Rating caption={' & up'} rating={r.rating}></Rating>
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link
-                  to={getFilterUrl({ rating: 'all' })}
-                  className={rating === 'all' ? 'text-bold' : ''}
-                >
-                  <Rating caption={' & up'} rating={0}></Rating>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </Col> */}
         <Col>
           {loading ? (
             <LoadingBox></LoadingBox>
@@ -211,7 +140,7 @@ export default function SearchScreen() {
             <MessageBox variant="danger">{error}</MessageBox>
           ) : (
             <>
-              <Row className="mb-5">
+              <Row className="justify-content-between mb-3">
                 <Col>
                   <div>
                     {countProducts === 0 ? 'No' : countProducts} Results
@@ -250,17 +179,14 @@ export default function SearchScreen() {
               {products.length === 0 && (
                 <MessageBox>No Product Found</MessageBox>
               )}
-              <div class="container">
-                <div class="row">
-                  <Row>
-                    {products.map((product) => (
-                      <Col xs={6} sm={6} lg={3} key={product._id}>
-                        <Product product={product}></Product>
-                      </Col>
-                    ))}
-                  </Row>
-                </div>
-              </div>
+
+              <Row>
+                {products.map((product) => (
+                  <Col xs={6} sm={6} lg={4} className="mb-3" key={product._id}>
+                    <Product product={product}></Product>
+                  </Col>
+                ))}
+              </Row>
 
               <div>
                 {[...Array(pages).keys()].map((x) => (
@@ -285,3 +211,75 @@ export default function SearchScreen() {
     </div>
   );
 }
+
+// <Col md={3}>
+// <h3>Department</h3>
+// <div>
+//   <ul>
+//     <li>
+//       <Link
+//         className={'all' === category ? 'text-bold' : ''}
+//         to={getFilterUrl({ category: 'all' })}
+//       >
+//         Any
+//       </Link>
+//     </li>
+//     {categories.map((c) => (
+//       <li key={c}>
+//         <Link
+//           className={c === category ? 'text-bold' : ''}
+//           to={getFilterUrl({ category: c })}
+//         >
+//           {c}
+//         </Link>
+//       </li>
+//     ))}
+//   </ul>
+// </div>
+// <div>
+//   <h3>Price</h3>
+//   <ul>
+//     <li>
+//       <Link
+//         className={'all' === price ? 'text-bold' : ''}
+//         to={getFilterUrl({ price: 'all' })}
+//       >
+//         Any
+//       </Link>
+//     </li>
+//     {prices.map((p) => (
+//       <li key={p.value}>
+//         <Link
+//           to={getFilterUrl({ price: p.value })}
+//           className={p.value === price ? 'text-bold' : ''}
+//         >
+//           {p.name}
+//         </Link>
+//       </li>
+//     ))}
+//   </ul>
+// </div>
+// <div>
+//   <h3>Avg. Customer Review</h3>
+//   <ul>
+//     {ratings.map((r) => (
+//       <li key={r.name}>
+//         <Link
+//           to={getFilterUrl({ rating: r.rating })}
+//           className={`${r.rating}` === `${rating}` ? 'text-bold' : ''}
+//         >
+//           <Rating caption={' & up'} rating={r.rating}></Rating>
+//         </Link>
+//       </li>
+//     ))}
+//     <li>
+//       <Link
+//         to={getFilterUrl({ rating: 'all' })}
+//         className={rating === 'all' ? 'text-bold' : ''}
+//       >
+//         <Rating caption={' & up'} rating={0}></Rating>
+//       </Link>
+//     </li>
+//   </ul>
+// </div>
+// </Col>

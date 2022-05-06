@@ -370,21 +370,21 @@ button.thumbnail {
 /* SIGNATURE COPYRIGHT IMPLEMENTATION CSS */
 
 /* CSS SEARCH SCREEN IMPLEMENTATION */
-h2 {
-  font-size: 20px;
+.card-individual {
+  background-color: rgba(245, 245, 245);
+  padding: 20%;
 }
-.card__information {
+.product-show {
   text-align: center;
-  background-color: #e6e6e6;
-  padding: 5%;
-  margin: 2% -2%;
+  font-size: 19px;
 }
 @media screen and (max-width: 956px) {
-  h2 {
-    font-size: 16px;
+  .card-individual {
+    background-color: rgba(245, 245, 245);
+    padding: 5%;
   }
-  .card__information {
-    margin: 2% -4%;
+  .product-show {
+    font-size: 16px;
   }
 }
 /* CSS SEARCH SCREEN IMPLEMENTATION */
