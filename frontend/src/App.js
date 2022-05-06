@@ -37,6 +37,8 @@ import Footer from './components/Footer';
 import Shipping from './components/Shipping';
 import Header from './components/Header';
 import Sticky from './components/Sticky';
+import SecondHeader from './components/SecondHeader';
+import MobileHeader from './components/MobileHeader';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -74,8 +76,8 @@ function App() {
             : 'd-flex flex-column site-container'
         }
       >
-        <Header />
-        <Sticky />
+        <SecondHeader />
+        <MobileHeader />
         {/* <ToastContainer position="bottom-center" limit={1} />
         <header>
           <Navbar bg="light" variant="light" expand="lg">

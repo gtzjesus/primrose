@@ -12,6 +12,8 @@ import MessageBox from '../components/MessageBox';
 import Button from 'react-bootstrap/Button';
 import Product from '../components/Product';
 import LinkContainer from 'react-router-bootstrap/LinkContainer';
+import SearchBox from '../components/SearchBox';
+import GoToTop from '../GoToTop';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -133,7 +135,7 @@ export default function SearchScreen() {
         <title>Search Products</title>
       </Helmet>
       <Row>
-        <Col className='column'>
+        <Col className="column">
           {loading ? (
             <LoadingBox></LoadingBox>
           ) : error ? (
@@ -141,6 +143,9 @@ export default function SearchScreen() {
           ) : (
             <>
               <Row className="justify-content-between mb-3">
+                <Col>
+                  <SearchBox />
+                </Col>
                 <Col>
                   <div>
                     {countProducts === 0 ? 'No' : countProducts} Results
@@ -208,6 +213,7 @@ export default function SearchScreen() {
           )}
         </Col>
       </Row>
+      <GoToTop />
     </div>
   );
 }

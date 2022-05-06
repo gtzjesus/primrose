@@ -3,6 +3,7 @@ import $ from 'jquery';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import SearchBox from './SearchBox';
+import Search from './Search';
 
 const Sticky = ({ totalItems }) => {
   // nav bar scroll animation
@@ -67,7 +68,7 @@ const Sticky = ({ totalItems }) => {
         </Link>
       </div>
       <div class="bottomMenu">
-        <SearchBox />
+        <Search />
       </div>
     </div>
   );
