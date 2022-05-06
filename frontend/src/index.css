@@ -211,6 +211,9 @@ main {
   flex-wrap: wrap;
   justify-content: center;
 }
+.column {
+  padding:5%;
+}
 .rating span {
   color: #ffc000;
 }

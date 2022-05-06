@@ -133,7 +133,7 @@ export default function SearchScreen() {
         <title>Search Products</title>
       </Helmet>
       <Row>
-        <Col>
+        <Col className='column'>
           {loading ? (
             <LoadingBox></LoadingBox>
           ) : error ? (
