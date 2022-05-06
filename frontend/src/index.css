@@ -64,7 +64,7 @@ input {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 1% 1% 0 1%;
+  padding: 1% 1% 0 2%;
   transition: 0.5s;
   color: #1c1c1c;
 }
@@ -102,7 +102,7 @@ input {
 
 @media screen and (max-width: 956px) {
   .header {
-    padding: 3.5% 3.5% 0 3.5%;
+    padding: 3.5% 3.5% 0 5.5%;
   }
 
   .header__title > a {
