@@ -211,8 +211,8 @@ export default function SearchScreen() {
             <MessageBox variant="danger">{error}</MessageBox>
           ) : (
             <>
-              <Row className="justify-content-between mb-3">
-                <Col md={6}>
+              <Row className="mb-5">
+                <Col>
                   <div>
                     {countProducts === 0 ? 'No' : countProducts} Results
                     {query !== 'all' && ' : ' + query}
@@ -252,9 +252,9 @@ export default function SearchScreen() {
               )}
               <div class="container">
                 <div class="row">
-                  <Row className="col-xs-2 ">
+                  <Row>
                     {products.map((product) => (
-                      <Col xs={6} sm={6} lg={3} className="mb-3" key={product._id}>
+                      <Col xs={6} sm={6} lg={3} key={product._id}>
                         <Product product={product}></Product>
                       </Col>
                     ))}

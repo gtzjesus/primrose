@@ -7,9 +7,7 @@
   list-style: none;
   color: #1c1c1c;
 }
-.test {
-  
-}
+
 h1 {
   font-size: 30px;
 }
@@ -68,6 +66,7 @@ input {
   padding: 1% 1% 0 2%;
   transition: 0.5s;
   color: #1c1c1c;
+  z-index: 99;
 }
 .header__title {
   font-family: 'Kalam', cursive, sans-serif;
@@ -122,7 +121,7 @@ input {
   /* UNITED STATES */
   .header__option h1 {
     padding: 0 15px 0 0;
-    font-size: 16px;
+    font-size: 26px;
     color: #1c1c1c;
   }
   .link {
@@ -369,3 +368,23 @@ button.thumbnail {
   }
 }
 /* SIGNATURE COPYRIGHT IMPLEMENTATION CSS */
+
+/* CSS SEARCH SCREEN IMPLEMENTATION */
+h2 {
+  font-size: 20px;
+}
+.card__information {
+  text-align: center;
+  background-color: #e6e6e6;
+  padding: 5%;
+  margin: 2% -2%;
+}
+@media screen and (max-width: 956px) {
+  h2 {
+    font-size: 16px;
+  }
+  .card__information {
+    margin: 2% -4%;
+  }
+}
+/* CSS SEARCH SCREEN IMPLEMENTATION */

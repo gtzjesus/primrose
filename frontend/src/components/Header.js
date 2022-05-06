@@ -62,7 +62,7 @@ const Header = ({ totalItems }) => {
         <div className="header__option">
           {userInfo ? (
             <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-              <LinkContainer to="/profile">
+              <LinkContainer to="/profile" >
                 <NavDropdown.Item>User Profile</NavDropdown.Item>
               </LinkContainer>
               <LinkContainer to="/orderhistory">
