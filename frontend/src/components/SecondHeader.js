@@ -57,10 +57,8 @@ const SecondHeader = ({ totalItems }) => {
       </div>
 
       <div className="header__account">
-                <div className="header__option">
-          <Link to="/signin">
-            
-          </Link>
+        <div className="header__option">
+          <Link to="/signin"></Link>
         </div>
         {/* <div className='header__option'>
             <Link to='/fave'>
@@ -77,11 +75,11 @@ const SecondHeader = ({ totalItems }) => {
             )}
           </Link>
         </div>
-        <div className="header__option">
+        {/* <div className="header__option">
           <Link to="/search">
             <SearchIcon />
           </Link>
-        </div>
+        </div> */}
         <div className="header__option">
           {userInfo ? (
             <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
@@ -105,7 +103,9 @@ const SecondHeader = ({ totalItems }) => {
           ) : (
             <Link to="/signin">
               <li>
-                <a><PersonOutlineIcon /></a>
+                <a>
+                  <PersonOutlineIcon />
+                </a>
               </li>
             </Link>
           )}

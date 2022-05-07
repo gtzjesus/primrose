@@ -13,6 +13,8 @@ import { getError } from '../utils';
 import { Badge } from '@mui/material';
 import { LinkContainer } from 'react-router-bootstrap';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import SearchBox from './SearchBox';
+import Search from './Search';
 
 const MobileHeader = ({ totalItems }) => {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -166,6 +168,7 @@ const MobileHeader = ({ totalItems }) => {
           </Link>
         </ul>
       </div>
+
       <div>
         <Link to="/">
           <h1 className="mobile__title">

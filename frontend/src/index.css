@@ -193,6 +193,10 @@ input {
   display: none;
   z-index: 1;
 }
+.searching {
+  width: 100%;
+  background-color: pink;
+}
 
 @media screen and (max-width: 956px) {
   .nav {
@@ -236,7 +240,7 @@ main {
 .btn-outline-primary {
   background-color: #ffff;
   color: #1c1c1c;
-  border: 0.5px solid black;
+  border: 0.1px solid black;
 }
 .btn-primary:hover,
 .btn-outline-primary:hover {
@@ -544,7 +548,7 @@ button.thumbnail {
     position: absolute;
     width: 110vw;
     margin: -100px 0 0 -50px;
-    height: 110vh;
+    height: 140vh;
     padding: 100px;
     padding-top: 125px;
     background: #ffff;
@@ -556,7 +560,7 @@ button.thumbnail {
   }
 
   #menu li > a {
-    padding:0;
+    padding: 0;
     font-size: 22px;
   }
   #menu li {

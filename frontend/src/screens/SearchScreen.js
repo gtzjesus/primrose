@@ -15,6 +15,7 @@ import LinkContainer from 'react-router-bootstrap/LinkContainer';
 import SearchBox from '../components/SearchBox';
 import GoToTop from '../GoToTop';
 
+
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
@@ -132,8 +133,9 @@ export default function SearchScreen() {
   return (
     <div>
       <Helmet>
-        <title>Search Products</title>
+        <title>Primrose Products</title>
       </Helmet>
+
       <Row>
         <Col className="column">
           {loading ? (
@@ -142,44 +144,8 @@ export default function SearchScreen() {
             <MessageBox variant="danger">{error}</MessageBox>
           ) : (
             <>
-              <Row className="justify-content-between mb-3">
-                <Col>
-                  <SearchBox />
-                </Col>
-                <Col>
-                  <div>
-                    {countProducts === 0 ? 'No' : countProducts} Results
-                    {query !== 'all' && ' : ' + query}
-                    {category !== 'all' && ' : ' + category}
-                    {price !== 'all' && ' : Price ' + price}
-                    {rating !== 'all' && ' : Rating ' + rating + ' & up'}
-                    {query !== 'all' ||
-                    category !== 'all' ||
-                    rating !== 'all' ||
-                    price !== 'all' ? (
-                      <Button
-                        variant="light"
-                        onClick={() => navigate('/search')}
-                      >
-                        <i className="fas fa-times-circle"></i>
-                      </Button>
-                    ) : null}
-                  </div>
-                </Col>
-                <Col className="text-end">
-                  Sort by{' '}
-                  <select
-                    value={order}
-                    onChange={(e) => {
-                      navigate(getFilterUrl({ order: e.target.value }));
-                    }}
-                  >
-                    <option value="newest">Newest Arrivals</option>
-                    <option value="lowest">Price: Low to High</option>
-                    <option value="highest">Price: High to Low</option>
-                    <option value="toprated">Avg. Customer Reviews</option>
-                  </select>
-                </Col>
+              <Row>
+                {/* <MobileFilters /> */}
               </Row>
               {products.length === 0 && (
                 <MessageBox>No Product Found</MessageBox>
@@ -216,6 +182,44 @@ export default function SearchScreen() {
       <GoToTop />
     </div>
   );
+}
+
+{
+  /* <Col>
+<div>
+  {countProducts === 0 ? 'No' : countProducts} Results
+  {query !== 'all' && ' : ' + query}
+  {category !== 'all' && ' : ' + category}
+  {price !== 'all' && ' : Price ' + price}
+  {rating !== 'all' && ' : Rating ' + rating + ' & up'}
+  {query !== 'all' ||
+  category !== 'all' ||
+  rating !== 'all' ||
+  price !== 'all' ? (
+    <Button
+      variant="light"
+      onClick={() => navigate('/search')}
+    >
+      <i className="fas fa-times-circle"></i>
+    </Button>
+  ) : null}
+</div>
+</Col>
+
+<Col className="text-end">
+Sort by{' '}
+<select
+  value={order}
+  onChange={(e) => {
+    navigate(getFilterUrl({ order: e.target.value }));
+  }}
+>
+  <option value="newest">Newest Arrivals</option>
+  <option value="lowest">Price: Low to High</option>
+  <option value="highest">Price: High to Low</option>
+  <option value="toprated">Avg. Customer Reviews</option>
+</select>
+</Col> */
 }
 
 // <Col md={3}>
