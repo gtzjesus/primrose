@@ -128,30 +128,28 @@ function ProductScreen() {
   ) : (
     <div>
       <Row>
-        <Col md={6}>
+        <Col>
           <img
             className="img-large"
             src={selectedImage || product.image}
             alt={product.name}
           ></img>
         </Col>
-        <Col md={3}>
+        <Col>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Helmet>
                 <title>{product.name}</title>
               </Helmet>
-              <h1>{product.name}</h1>
+              <h1 id="review__title">{product.name}</h1>
+            </ListGroup.Item>
+
+            <ListGroup.Item id="review__title">
+              {' '}
+              ${product.price}
             </ListGroup.Item>
             <ListGroup.Item>
-              <Rating
-                rating={product.rating}
-                numReviews={product.numReviews}
-              ></Rating>
-            </ListGroup.Item>
-            <ListGroup.Item>Price : ${product.price}</ListGroup.Item>
-            <ListGroup.Item>
-              <Row xs={1} md={2} className="g-2">
+              <Row>
                 {[product.image, ...product.images].map((x) => (
                   <Col key={x}>
                     <Card>
@@ -172,47 +170,19 @@ function ProductScreen() {
               Description:
               <p>{product.description}</p>
             </ListGroup.Item>
+            <ListGroup.Item>
+              <Rating
+                rating={product.rating}
+                numReviews={product.numReviews}
+              ></Rating>
+            </ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={3}>
-          <Card>
-            <Card.Body>
-              <ListGroup variant="flush">
-                <ListGroupItem>
-                  <Row>
-                    <Col>Price:</Col>
-                    <Col>${product.price}</Col>
-                  </Row>
-                </ListGroupItem>
-                <ListGroupItem>
-                  <Row>
-                    <Col>Status:</Col>
-                    <Col>
-                      {product.countInStock > 0 ? (
-                        <Badge bg="success">In Stock</Badge>
-                      ) : (
-                        <Badge bg="danger">Unavailable</Badge>
-                      )}
-                    </Col>
-                  </Row>
-                </ListGroupItem>
-
-                {product.countInStock > 0 && (
-                  <ListGroupItem>
-                    <div className="d-grid">
-                      <Button onClick={addToCartHandler} variant="primary">
-                        Add to cart
-                      </Button>
-                    </div>
-                  </ListGroupItem>
-                )}
-              </ListGroup>
-            </Card.Body>
-          </Card>
-        </Col>
       </Row>
-      <div className="my-3">
-        <h2 ref={reviewsRef}>Reviews</h2>
+      <Col className="product__reviews">
+        <h1 id="review__title" ref={reviewsRef}>
+          Reviews
+        </h1>
         <div className="mb-3">
           {product.reviews.length === 0 && (
             <MessageBox>There is no review</MessageBox>
@@ -228,54 +198,89 @@ function ProductScreen() {
             </ListGroup.Item>
           ))}
         </ListGroup>
-        <div className="my-3">
-          {userInfo ? (
-            <form onSubmit={submitHandler}>
-              <h2>Write a customer review</h2>
-              <Form.Group className="mb-3" controlId="rating">
-                <Form.Label>Rating</Form.Label>
-                <Form.Select
-                  aria-label="Rating"
-                  value={rating}
-                  onChange={(e) => setRating(e.target.value)}
-                >
-                  <option value="">Stars</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </Form.Select>
-              </Form.Group>
-              <FloatingLabel
-                controlId="floatingTextarea"
-                label="Comments"
-                className="mb-3"
-              >
-                <Form.Control
-                  as="textarea"
-                  placeholder="Leave a comment here"
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
-                />
-              </FloatingLabel>
+      </Col>
 
-              <div className="mb-3">
-                <Button disabled={loadingCreateReview} type="submit">
-                  Submit
-                </Button>
-                {loadingCreateReview && <LoadingBox></LoadingBox>}
-              </div>
-            </form>
-          ) : (
-            <MessageBox>
-              Please{' '}
-              <Link to={`/signin?redirect=/product/${product.slug}`}>
-                Sign In
-              </Link>{' '}
-              to write a review
-            </MessageBox>
-          )}
+      <Col className="product__reviews">
+        <Card>
+          <Card.Body>
+            <ListGroup variant="flush">
+              <ListGroupItem>
+                <Row>
+                  <Col>Product Status:</Col>
+                  <Col>
+                    {product.countInStock > 0 ? (
+                      <Badge bg="dark">In Stock</Badge>
+                    ) : (
+                      <Badge bg="danger">Unavailable</Badge>
+                    )}
+                  </Col>
+                </Row>
+              </ListGroupItem>
+
+              {product.countInStock > 0 && (
+                <ListGroupItem>
+                  <div className="product__button">
+                    <Button onClick={addToCartHandler} variant="primary">
+                      Add to Bag
+                    </Button>
+                  </div>
+                </ListGroupItem>
+              )}
+            </ListGroup>
+          </Card.Body>
+        </Card>
+      </Col>
+
+      <div>
+        <div>
+          <Card className="product__reviews">
+            {userInfo ? (
+              <form onSubmit={submitHandler} className="product__list">
+                <h2 id="review__title">Leave us a Review</h2>
+                <Form.Group className="mb-3" controlId="rating">
+                  <Form.Select
+                    aria-label="Rating"
+                    value={rating}
+                    onChange={(e) => setRating(e.target.value)}
+                  >
+                    <option value="">Select Rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </Form.Select>
+                </Form.Group>
+                <FloatingLabel
+                  controlId="floatingTextarea"
+                  label="Comment"
+                  className="mb-3"
+                >
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                  />
+                </FloatingLabel>
+
+                <div className="product__button">
+                  <Button disabled={loadingCreateReview} type="submit">
+                    Submit Review
+                  </Button>
+                  {loadingCreateReview && <LoadingBox></LoadingBox>}
+                </div>
+              </form>
+            ) : (
+              <MessageBox>
+                Please{' '}
+                <Link to={`/signin?redirect=/product/${product.slug}`}>
+                  Sign In
+                </Link>{' '}
+                to leave us a review
+              </MessageBox>
+            )}
+          </Card>
         </div>
       </div>
       <GoToTop />

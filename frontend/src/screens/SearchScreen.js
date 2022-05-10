@@ -160,13 +160,14 @@ export default function SearchScreen() {
                   </Button>
                 ) : null}
               </div>
+              {products.length === 0 && (
+                <MessageBox>No Product Found</MessageBox>
+              )}
               <Row>
                 <Filters />
               </Row>
 
-              {products.length === 0 && (
-                <MessageBox>No Product Found</MessageBox>
-              )}
+
 
               <Row>
                 {products.map((product) => (

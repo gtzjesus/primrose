@@ -26,6 +26,7 @@ const productSchema = new mongoose.Schema(
     numReviews: { type: Number, required: true },
     reviews: [reviewSchema],
   },
+
   {
     timestamps: true,
   }

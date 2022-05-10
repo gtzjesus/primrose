@@ -135,6 +135,15 @@ orderRouter.put(
       };
 
       const updatedOrder = await order.save();
+
+      // Update count in stock
+      for (const index in updatedOrder.orderItems) {
+        const item = updatedOrder.orderItems[index];
+        const product = await Product.findById(item.product);
+        product.countInStock -= item.qty;
+        product.sold += item.qty;
+        await product.save();
+      }
       res.send({ message: 'Order Paid', order: updatedOrder });
     } else {
       res.status(404).send({ message: 'Order Not Found' });

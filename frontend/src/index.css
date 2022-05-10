@@ -606,7 +606,7 @@ h1 > img {
   justify-content: space-between;
   padding: 1% 20%;
   margin: 2.5% 0;
-
+  z-index: 99;
   border: 2.5px solid rgb(246, 246, 246);
 }
 .filters__results {
@@ -640,3 +640,32 @@ h1 > img {
   }
 }
 /* FILTERS IMPLEMENTATION */
+
+/* PRODUCT REVIEWS IMPLEMENTAION FOR CSS */
+.product__reviews {
+  margin: 5% 15%;
+}
+#review__title {
+  font-size: 22px;
+}
+.product__button {
+  text-align: center;
+  padding: 5%;
+}
+.product__button > Button {
+  background-color: #1c1c1c;
+  color: #ffff;
+  width: 100%;
+}
+.product__list{
+  padding: 5%;
+}
+@media screen and (max-width: 956px) {
+  .product__reviews {
+    margin: 5% 5%;
+  }
+  #review__title {
+    font-size: 22px;
+  }
+}
+/* PRODUCT REVIEWS IMPLEMENTAION FOR CSS */
