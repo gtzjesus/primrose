@@ -141,7 +141,7 @@ function Filters() {
 
   return (
     <div className="filters">
-      <NavDropdown  title="Department" id="basic-nav-dropdown">
+      <NavDropdown title="Department" id="basic-nav-dropdown">
         <ul>
           <li>
             <Link
@@ -224,24 +224,3 @@ function Filters() {
 }
 
 export default Filters;
-
-{
-  /* <div className="filters__results">
-{' '}
-<div>
-  {countProducts === 0 ? 'No' : countProducts} Results
-  {query !== 'all' && ' : ' + query}
-  {category !== 'all' && ' : ' + category}
-  {price !== 'all' && ' : Price ' + price}
-  {rating !== 'all' && ' : Rating ' + rating + ' & up'}
-  {query !== 'all' ||
-  category !== 'all' ||
-  rating !== 'all' ||
-  price !== 'all' ? (
-    <Button variant="light" onClick={() => navigate('/search')}>
-      <i className="fas fa-times-circle"></i>
-    </Button>
-  ) : null}
-</div>
-</div> */
-}

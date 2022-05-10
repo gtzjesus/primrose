@@ -138,7 +138,7 @@ export default function SearchScreen() {
       </Helmet>
 
       <Row>
-        <Col md={3} className='desktop__filter'>
+        <Col md={3} className="desktop__filter">
           <h3>Department</h3>
           <div>
             <ul>
@@ -209,6 +209,23 @@ export default function SearchScreen() {
             </ul>
           </div>
         </Col>
+
+        <div className='filters__results'>
+          {countProducts === 0 ? 'No' : countProducts} Results
+          {query !== 'all' && ' : ' + query}
+          {category !== 'all' && ' : ' + category}
+          {price !== 'all' && ' : Price ' + price}
+          {rating !== 'all' && ' : Rating ' + rating + ' & up'}
+          {query !== 'all' ||
+          category !== 'all' ||
+          rating !== 'all' ||
+          price !== 'all' ? (
+            <Button variant="light" onClick={() => navigate('/search')}>
+              <i className="fas fa-times-circle"></i>
+            </Button>
+          ) : null}
+        </div>
+
         <Col className="column">
           {loading ? (
             <LoadingBox></LoadingBox>

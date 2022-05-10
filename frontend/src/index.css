@@ -617,5 +617,8 @@ h1 > img {
   .filter__title {
     font-size: 12px;
   }
+  .filters__results {
+    text-align: center;
+  }
 }
 /* FILTERS IMPLEMENTATION */
