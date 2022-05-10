@@ -6,7 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import { useContext, useState, useEffect } from 'react';
 import { Store } from '../Store';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { getError } from '../utils';
 
 export default function SigninScreen() {
@@ -41,6 +41,17 @@ export default function SigninScreen() {
       navigate(redirect);
     }
   }, [navigate, redirect, userInfo]);
+
+  function errorMessage() {
+    var error = document.getElementById('error');
+    if (isNaN(document.getElementById('number').value)) {
+      // Changing HTML to draw attention
+      error.innerHTML =
+        "<span style='color: red;'>" + 'Please enter a valid number</span>';
+    } else {
+      error.innerHTML = '';
+    }
+  }
 
   return (
     <Container className="small-container">

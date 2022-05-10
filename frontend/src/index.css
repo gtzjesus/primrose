@@ -628,7 +628,7 @@ h1 > img {
     display: flex;
     justify-content: space-between;
     margin: 2.5% 0;
-    padding: 2.5% 15%;
+    padding: 2.5% 5%;
     position: sticky;
   }
   .filter__title {
