@@ -281,7 +281,7 @@ main {
   max-width: 100%;
 }
 .img-thumbnail {
-  height: 80px;
+  height: 10px;
 }
 .small-container {
   max-width: 600px;
@@ -657,7 +657,7 @@ h1 > img {
   color: #ffff;
   width: 100%;
 }
-.product__list{
+.product__list {
   padding: 5%;
 }
 @media screen and (max-width: 956px) {
