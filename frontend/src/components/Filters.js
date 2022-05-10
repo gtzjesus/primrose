@@ -121,22 +121,7 @@ function Filters() {
     const filterPrice = filter.price || price;
     const sortOrder = filter.order || order;
     return `/search?category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`;
-  };
-  //   closing mobile menu function implementation
-  const menuDirectTops = () => {
-    window.location.href = `/search/?query=Top`;
-  };
-  const menuDirectBottoms = () => {
-    window.location.href = `/search/?query=Bottom`;
-  };
-  const menuDirectDresses = () => {
-    window.location.href = `/search/?query=Dress`;
-  };
-  const menuDirectAccessories = () => {
-    window.location.href = `/search/?query=Accessorie`;
-  };
-  const menuDirectSignIn = () => {
-    window.location.href = '/signin';
+    
   };
 
   return (
