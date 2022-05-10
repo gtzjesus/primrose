@@ -40,7 +40,7 @@ function Product(props) {
         </Link>
         <Card.Text>
           <h2 class="product-show">${product.price}</h2>
-          <Rating rating={product.rating} numReviews={product.numReviews} />
+          {/* <Rating rating={product.rating} numReviews={product.numReviews} /> */}
         </Card.Text>
         {/* <Rating rating={product.rating} numReviews={product.numReviews} />
         {product.countInStock === 0 ? (

@@ -38,6 +38,7 @@ import Shipping from './components/Shipping';
 import Header from './components/Header';
 import Sticky from './components/Sticky';
 import SecondHeader from './components/SecondHeader';
+
 import MobileHeader from './components/MobileHeader';
 
 function App() {
@@ -77,6 +78,7 @@ function App() {
         }
       >
         <SecondHeader />
+        <Sticky />
         <MobileHeader />
         {/* <ToastContainer position="bottom-center" limit={1} />
         <header>

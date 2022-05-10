@@ -67,9 +67,7 @@ const Sticky = ({ totalItems }) => {
           </li>
         </Link>
       </div>
-      <div class="bottomMenu">
-        <Search />
-      </div>
+      <div class="bottomMenu">{/* <Search /> */}</div>
     </div>
   );
 };

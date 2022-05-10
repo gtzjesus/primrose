@@ -412,7 +412,7 @@ button.thumbnail {
 }
 /* SIGNATURE COPYRIGHT IMPLEMENTATION CSS */
 .column {
-  padding: 5%;
+  padding: 2.5%;
 }
 /* CSS SEARCH SCREEN IMPLEMENTATION */
 .card-individual {
@@ -425,11 +425,11 @@ button.thumbnail {
 }
 @media screen and (max-width: 956px) {
   .card-individual {
-    background-color: rgba(245, 245, 245);
-    padding: 18%;
+    background-color: rgb(247, 247, 247);
+    padding: 10%;
   }
   .product-show {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 /* CSS SEARCH SCREEN IMPLEMENTATION */
@@ -445,7 +445,8 @@ button.thumbnail {
     transition: 0.5s ease;
     top: 0;
     z-index: 99;
-    padding: 2.5%;
+    padding: 2%;
+    margin: 0;
   }
   .mobile__options {
     display: flex;
@@ -455,9 +456,6 @@ button.thumbnail {
     font-size: 22px;
     margin: 2.5% 0 0 0;
     font-family: 'Kalam', cursive, sans-serif;
-  }
-  .mobile__icon {
-    height: 25px !important;
   }
   /* Menu Hamburger Implementation Styles */
   #menuToggle {
@@ -473,9 +471,10 @@ button.thumbnail {
 
   #menuToggle input {
     display: block;
-    width: 40px;
-    height: 22px;
+    width: 50px;
+    height: 32px;
     position: absolute;
+    background-color: pink;
     top: -7px;
     left: -10px;
     cursor: pointer;
@@ -490,7 +489,7 @@ button.thumbnail {
   #menuToggle span {
     display: block;
     width: 25px;
-    height: 2px;
+    height: 1.8px;
     margin-bottom: 5px;
 
     position: relative;
@@ -565,6 +564,8 @@ button.thumbnail {
   }
   #menu li {
     padding: 2.5% 0;
+    display: flex;
+    justify-content: center;
   }
 
   /*
@@ -587,3 +588,34 @@ h1 > img {
 }
 /* MOBILE HEADER IMPLEMENTATION CSS */
 /* MOBILE IMPLEMENTATION SCRENN */
+/* FILTERS DESKTOP IMPLEMENTATION */
+.filters__desktop {
+}
+/* FILTERS DESKTOP IMPLEMENTATION */
+/* FILTERS IMPLEMENTATION */
+.filters {
+  display: none;
+}
+
+@media screen and (max-width: 956px) {
+  .nav {
+    display: none;
+  }
+  .desktop__filter {
+    display: none;
+  }
+  .filters__desktop {
+    display: none;
+  }
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2.5% 10%;
+    position: sticky;
+  }
+  .filter__title {
+    font-size: 12px;
+  }
+}
+/* FILTERS IMPLEMENTATION */

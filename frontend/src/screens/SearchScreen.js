@@ -13,8 +13,9 @@ import Button from 'react-bootstrap/Button';
 import Product from '../components/Product';
 import LinkContainer from 'react-router-bootstrap/LinkContainer';
 import SearchBox from '../components/SearchBox';
+import MobileHeader from '../components/MobileHeader';
 import GoToTop from '../GoToTop';
-
+import Filters from '../components/Filters';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -137,6 +138,77 @@ export default function SearchScreen() {
       </Helmet>
 
       <Row>
+        <Col md={3} className='desktop__filter'>
+          <h3>Department</h3>
+          <div>
+            <ul>
+              <li>
+                <Link
+                  className={'all' === category ? 'text-bold' : ''}
+                  to={getFilterUrl({ category: 'all' })}
+                >
+                  Any
+                </Link>
+              </li>
+              {categories.map((c) => (
+                <li key={c}>
+                  <Link
+                    className={c === category ? 'text-bold' : ''}
+                    to={getFilterUrl({ category: c })}
+                  >
+                    {c}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3>Price</h3>
+            <ul>
+              <li>
+                <Link
+                  className={'all' === price ? 'text-bold' : ''}
+                  to={getFilterUrl({ price: 'all' })}
+                >
+                  Any
+                </Link>
+              </li>
+              {prices.map((p) => (
+                <li key={p.value}>
+                  <Link
+                    to={getFilterUrl({ price: p.value })}
+                    className={p.value === price ? 'text-bold' : ''}
+                  >
+                    {p.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3>Avg. Customer Review</h3>
+            <ul>
+              {ratings.map((r) => (
+                <li key={r.name}>
+                  <Link
+                    to={getFilterUrl({ rating: r.rating })}
+                    className={`${r.rating}` === `${rating}` ? 'text-bold' : ''}
+                  >
+                    <Rating caption={' & up'} rating={r.rating}></Rating>
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  to={getFilterUrl({ rating: 'all' })}
+                  className={rating === 'all' ? 'text-bold' : ''}
+                >
+                  <Rating caption={' & up'} rating={0}></Rating>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </Col>
         <Col className="column">
           {loading ? (
             <LoadingBox></LoadingBox>
@@ -145,8 +217,9 @@ export default function SearchScreen() {
           ) : (
             <>
               <Row>
-                {/* <MobileFilters /> */}
+                <Filters />
               </Row>
+
               {products.length === 0 && (
                 <MessageBox>No Product Found</MessageBox>
               )}
@@ -183,113 +256,3 @@ export default function SearchScreen() {
     </div>
   );
 }
-
-{
-  /* <Col>
-<div>
-  {countProducts === 0 ? 'No' : countProducts} Results
-  {query !== 'all' && ' : ' + query}
-  {category !== 'all' && ' : ' + category}
-  {price !== 'all' && ' : Price ' + price}
-  {rating !== 'all' && ' : Rating ' + rating + ' & up'}
-  {query !== 'all' ||
-  category !== 'all' ||
-  rating !== 'all' ||
-  price !== 'all' ? (
-    <Button
-      variant="light"
-      onClick={() => navigate('/search')}
-    >
-      <i className="fas fa-times-circle"></i>
-    </Button>
-  ) : null}
-</div>
-</Col>
-
-<Col className="text-end">
-Sort by{' '}
-<select
-  value={order}
-  onChange={(e) => {
-    navigate(getFilterUrl({ order: e.target.value }));
-  }}
->
-  <option value="newest">Newest Arrivals</option>
-  <option value="lowest">Price: Low to High</option>
-  <option value="highest">Price: High to Low</option>
-  <option value="toprated">Avg. Customer Reviews</option>
-</select>
-</Col> */
-}
-
-// <Col md={3}>
-// <h3>Department</h3>
-// <div>
-//   <ul>
-//     <li>
-//       <Link
-//         className={'all' === category ? 'text-bold' : ''}
-//         to={getFilterUrl({ category: 'all' })}
-//       >
-//         Any
-//       </Link>
-//     </li>
-//     {categories.map((c) => (
-//       <li key={c}>
-//         <Link
-//           className={c === category ? 'text-bold' : ''}
-//           to={getFilterUrl({ category: c })}
-//         >
-//           {c}
-//         </Link>
-//       </li>
-//     ))}
-//   </ul>
-// </div>
-// <div>
-//   <h3>Price</h3>
-//   <ul>
-//     <li>
-//       <Link
-//         className={'all' === price ? 'text-bold' : ''}
-//         to={getFilterUrl({ price: 'all' })}
-//       >
-//         Any
-//       </Link>
-//     </li>
-//     {prices.map((p) => (
-//       <li key={p.value}>
-//         <Link
-//           to={getFilterUrl({ price: p.value })}
-//           className={p.value === price ? 'text-bold' : ''}
-//         >
-//           {p.name}
-//         </Link>
-//       </li>
-//     ))}
-//   </ul>
-// </div>
-// <div>
-//   <h3>Avg. Customer Review</h3>
-//   <ul>
-//     {ratings.map((r) => (
-//       <li key={r.name}>
-//         <Link
-//           to={getFilterUrl({ rating: r.rating })}
-//           className={`${r.rating}` === `${rating}` ? 'text-bold' : ''}
-//         >
-//           <Rating caption={' & up'} rating={r.rating}></Rating>
-//         </Link>
-//       </li>
-//     ))}
-//     <li>
-//       <Link
-//         to={getFilterUrl({ rating: 'all' })}
-//         className={rating === 'all' ? 'text-bold' : ''}
-//       >
-//         <Rating caption={' & up'} rating={0}></Rating>
-//       </Link>
-//     </li>
-//   </ul>
-// </div>
-// </Col>

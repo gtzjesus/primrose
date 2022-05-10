@@ -184,7 +184,7 @@ const MobileHeader = ({ totalItems }) => {
         {/* <div className='mobile__option'>
                     <FavoriteBorderIcon className='mobile__icon' />
                 </div> */}
-        <div className="mobile__option">
+        <div className="mobile__option" id="mobile__icon">
           <Link to="/cart">
             {cart.cartItems.length > 0 && (
               <Badge pill bg="danger">
