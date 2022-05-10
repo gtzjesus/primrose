@@ -272,13 +272,7 @@ function ProductScreen() {
                 </div>
               </form>
             ) : (
-              <MessageBox>
-                Please{' '}
-                <Link to={`/signin?redirect=/product/${product.slug}`}>
-                  Sign In
-                </Link>{' '}
-                to leave us a review
-              </MessageBox>
+              <MessageBox></MessageBox>
             )}
           </Card>
         </div>
