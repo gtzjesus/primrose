@@ -272,7 +272,10 @@ function ProductScreen() {
                 </div>
               </form>
             ) : (
-              <MessageBox></MessageBox>
+              <MessageBox>
+                Please <Link to={`/signin?redirect=/search`}>Sign In</Link> to
+                leave us a review
+              </MessageBox>
             )}
           </Card>
         </div>
