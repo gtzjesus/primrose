@@ -167,8 +167,6 @@ export default function SearchScreen() {
                 <Filters />
               </Row>
 
-
-
               <Row>
                 {products.map((product) => (
                   <Col xs={6} sm={6} lg={4} className="mb-3" key={product._id}>
@@ -177,7 +175,7 @@ export default function SearchScreen() {
                 ))}
               </Row>
 
-              <div>
+              {/* <div>
                 {[...Array(pages).keys()].map((x) => (
                   <LinkContainer
                     key={x + 1}
@@ -192,7 +190,7 @@ export default function SearchScreen() {
                     </Button>
                   </LinkContainer>
                 ))}
-              </div>
+              </div> */}
             </>
           )}
         </Col>
