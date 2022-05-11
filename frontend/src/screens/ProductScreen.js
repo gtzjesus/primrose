@@ -205,16 +205,18 @@ function ProductScreen() {
           <Card.Body>
             <ListGroup variant="flush">
               <ListGroupItem>
-                <Row>
-                  <Col>Product Status:</Col>
-                  <Col>
+                <div className="status">
+                  <div>
+                    <h1 id="review__title">Product Status:</h1>
+                  </div>
+                  <div>
                     {product.countInStock > 0 ? (
                       <Badge bg="dark">In Stock</Badge>
                     ) : (
                       <Badge bg="danger">Unavailable</Badge>
                     )}
-                  </Col>
-                </Row>
+                  </div>
+                </div>
               </ListGroupItem>
 
               {product.countInStock > 0 && (

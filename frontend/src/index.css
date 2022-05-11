@@ -606,12 +606,16 @@ h1 > img {
   justify-content: space-between;
   padding: 1% 20%;
   margin: 2.5% 0;
-  z-index: 99;
+  z-index: 90;
   border: 2.5px solid rgb(246, 246, 246);
 }
 .filters__results {
   text-align: center;
   padding: 0 0 2% 0;
+}
+.status {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 956px) {
@@ -646,7 +650,7 @@ h1 > img {
   margin: 5% 15%;
 }
 #review__title {
-  font-size: 22px;
+  font-size: 20px;
 }
 .product__button {
   text-align: center;
@@ -665,7 +669,7 @@ h1 > img {
     margin: 5% 5%;
   }
   #review__title {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 /* PRODUCT REVIEWS IMPLEMENTAION FOR CSS */
