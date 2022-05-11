@@ -151,8 +151,8 @@ function ProductScreen() {
             <ListGroup.Item>
               <Row>
                 {[product.image, ...product.images].map((x) => (
-                  <Col key={x}>
-                    <Card>
+                  <Col key={x} className="product__col">
+                    <Card className="product__card">
                       <Button
                         className="thumbnail"
                         type="button"
@@ -179,26 +179,6 @@ function ProductScreen() {
           </ListGroup>
         </Col>
       </Row>
-      <Col className="product__reviews">
-        <h1 id="review__title" ref={reviewsRef}>
-          Reviews
-        </h1>
-        <div className="mb-3">
-          {product.reviews.length === 0 && (
-            <MessageBox>There is no review</MessageBox>
-          )}
-        </div>
-        <ListGroup>
-          {product.reviews.map((review) => (
-            <ListGroup.Item key={review._id}>
-              <strong>{review.name}</strong>
-              <Rating rating={review.rating} caption=" "></Rating>
-              <p>{review.createdAt.substring(0, 10)}</p>
-              <p>{review.comment}</p>
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
-      </Col>
 
       <Col className="product__reviews">
         <Card>
@@ -231,6 +211,26 @@ function ProductScreen() {
             </ListGroup>
           </Card.Body>
         </Card>
+      </Col>
+      <Col className="product__reviews">
+        <h1 id="review__title" ref={reviewsRef}>
+          Reviews
+        </h1>
+        <div className="mb-3">
+          {product.reviews.length === 0 && (
+            <MessageBox>There is no review</MessageBox>
+          )}
+        </div>
+        <ListGroup>
+          {product.reviews.map((review) => (
+            <ListGroup.Item key={review._id}>
+              <strong>{review.name}</strong>
+              <Rating rating={review.rating} caption=" "></Rating>
+              <p>{review.createdAt.substring(0, 10)}</p>
+              <p>{review.comment}</p>
+            </ListGroup.Item>
+          ))}
+        </ListGroup>
       </Col>
 
       <div>

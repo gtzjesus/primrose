@@ -264,7 +264,7 @@ main {
   justify-content: center;
 }
 .rating span {
-  color: #ffc000;
+  color: #1c1c1c;
 }
 .product {
   border: 0.5px solid;
@@ -281,8 +281,24 @@ main {
   max-width: 100%;
 }
 .img-thumbnail {
-  height: 10px;
+  height: 90px;
 }
+/* PRODUCT SCREEN IMPLEMENTATION CSS */
+.product__col {
+}
+.product__card {
+
+}
+@media screen and (max-width: 956px) {
+  .product__col {
+    margin: 5% 0;
+  }
+  .product__card {
+    width: 80px;
+    padding: 1%;
+  }
+}
+/* PRODUCT SCREEN IMPLEMENTATION CSS */
 .small-container {
   max-width: 600px;
 }
